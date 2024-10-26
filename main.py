@@ -60,14 +60,15 @@ def game_over():
 #exits game if user answers no to play again
 def exit_game():
     print('Thanks for playing!')
+    exit()
 
 #asks user if they want to play again
 def play_again():
     choice =input('Would you like to play again?: ')
     choice = choice.lower()
-    while choice != 'no':
-        game()
-    exit_game()
+    if choice == 'no':
+        exit_game()
+    game()
 
 #puts all the pieces of the game together
 def game():
